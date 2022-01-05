@@ -1,0 +1,57 @@
+/* 版心 */
+
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* 第一部分，顶部 */
+
+.xtx-shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.xtx-shortcut .container {
+    height: 52px;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-shortcut .container li {
+    /* 因为li是块级元素，所以要设置浮动才能在一行显示 */
+    float: left;
+    /* 让li元素垂直居中，line-height */
+    line-height: 52px;
+    /* 给|设置颜色 */
+    color: #666;
+}
+
+.xtx-shortcut .container ul a {
+    margin: 0 16px;
+    color: #dcdcdc;
+    font-size: 14px;
+}
+
+
+/* 最后一个li标签中的a */
+
+.xtx-shortcut .container ul li:last-child a {
+    margin-right: 0;
+}
+
+
+/* 小手机的设置,在a标签中,这是伪元素是默认行内元素 */
+
+.xtx-shortcut .container li:last-child a::before {
+    content: "";
+    /* 将行内元素转化成行内块元素，默认的行内块元素和文字的基线对齐，所以嗨呀继续设置中部对齐 */
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background: url(../images/sprites.png) -160px -70px;
+}
